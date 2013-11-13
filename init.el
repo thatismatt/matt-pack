@@ -1,14 +1,7 @@
 ;; font
-(set-face-font 'default
-               (if (eq system-type 'windows-nt)
-                   "Consolas-11"
-                   ;; "Liberation Mono-12"
-                   "DejaVu Sans Mono-11"))
-
-;; font tweaks
-;; (set-face-attribute 'default nil :height 105)
-;; (set-face-attribute 'default nil :font "Liberation Mono")
-;; (x-list-fonts "*")
+(set-face-attribute 'default nil :height 120)
+(set-face-attribute 'default nil :family "Liberation Mono")
+;; (set-face-attribute 'default nil :family "DejaVu Sans Mono")
 
 ;; cursor - bar instead of a block
 (setq default-cursor-type '(bar . 2))

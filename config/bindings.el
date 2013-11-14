@@ -35,3 +35,4 @@
 (define-key dired-mode-map (kbd "q") 'kill-this-buffer)
 (define-key help-mode-map (kbd "q") 'kill-this-buffer)
 (define-key magit-mode-map (kbd "q") 'kill-this-buffer)
+(define-key completion-list-mode-map (kbd "q") 'kill-this-buffer)

@@ -29,6 +29,7 @@
 (define-key dired-mode-map (kbd "M-<right>") 'dired-hide-subdir)
 (define-key dired-mode-map (kbd "C-k") 'dired-kill-subdir)
 (define-key dired-mode-map (kbd "M-k") 'dired-kill-tree)
+(define-key dired-mode-map (kbd "RET") 'dired-find-file-other-window)
 
 ;; make q kill some buffers
 (define-key dired-mode-map (kbd "q") 'kill-this-buffer)

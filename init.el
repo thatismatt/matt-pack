@@ -13,7 +13,16 @@
                    (abbreviate-file-name (buffer-file-name))
                  "%b"))))
 
-;; turn zoning off
+;; kill whole line
+(setq kill-whole-line t)
+
+;; turn off newline on save
+(setq require-final-newline nil)
+
+;; enable stuff
+(put 'upcase-region 'disabled nil)
+
+;; zoning - turn off
 (setq live-disable-zone t)
 
 ;; rainbow delimiters
@@ -29,7 +38,7 @@
 ;; turn on in nrepl
 (add-hook 'nrepl-mode-hook 'rainbow-delimiters-mode)
 
-;; disable VCS things - too slow on windows
+;; vcs - disable on windows as too slow
 (when (eq system-type 'windows-nt)
   (setq vc-handled-backends ())
   (global-git-gutter-mode 0))
@@ -37,27 +46,18 @@
 ;; js2-mode
 (set-face-foreground 'js2-function-param "#0c0")
 
-;; kill whole line
-(setq kill-whole-line t)
-
 ;; nrepl tweaks
 ;; (setq nrepl-popup-stacktraces-in-repl t)
 ;; default: (setq nrepl-popup-stacktraces-in-repl nil)
 
-;; load bindings config
-(live-load-config-file "bindings.el")
-
-;; add my yas snippets
+;; yas - my snippets
 (require 'yasnippet)
 (setq matts-snippet-dir (concat live-current-pack-dir "etc/snippets"))
 (setq yas-snippet-dirs `(,matts-snippet-dir ,live-yasnippet-dir))
 (yas-reload-all)
 
-;; turn off newline on save
-(setq require-final-newline nil)
-
-;; ignore space in magit diff
+;; magit - ignore space in diff
 (setq magit-diff-options (quote ("--ignore-space-change")))
 
-;; enable stuff
-(put 'upcase-region 'disabled nil)
+;; load bindings config
+(live-load-config-file "bindings.el")

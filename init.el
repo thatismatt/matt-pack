@@ -60,7 +60,7 @@
 (setq magit-diff-options (quote ("--ignore-space-change")))
 
 ;; auto mode
-(add-to-list ' auto-mode-alist '("\\.jspf?$" . html-mode))
+(add-to-list 'auto-mode-alist '("\\.\\(jspf?\\|tag\\)$" . html-mode))
 
 ;; load bindings config
 (live-load-config-file "bindings.el")

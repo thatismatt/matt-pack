@@ -1,6 +1,6 @@
 ;; text scaling
-;; (define-key global-map (kbd "C-+") 'text-scale-increase)
-;; (define-key global-map (kbd "C--") 'text-scale-decrease)
+(define-key global-map (kbd "<C-mouse-4>") (lambda () (interactive) (text-scale-increase 0.5)))
+(define-key global-map (kbd "<C-mouse-5>") (lambda () (interactive) (text-scale-decrease 0.5)))
 
 ;; kill buffer - without confirmation
 (define-key global-map (kbd "C-x k") 'kill-this-buffer)
@@ -9,6 +9,10 @@
 (define-key global-map (kbd "S-<menu>") 'previous-buffer)
 (define-key global-map (kbd "<menu>")   'next-buffer)
 (define-key global-map (kbd "C-<menu>") 'win-switch-dispatch)
+
+;; window resizing
+(define-key global-map (kbd "C--") (lambda () (interactive) (shrink-window-horizontally 5)))
+(define-key global-map (kbd "C-=") (lambda () (interactive) (enlarge-window-horizontally 5)))
 
 ;; undo tree
 (define-key global-map (kbd "C-, u") 'undo-tree-visualize)

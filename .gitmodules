@@ -1,0 +1,3 @@
+[submodule "lib/dired-details"]
+	path = lib/dired-details
+	url = https://github.com/emacsmirror/dired-details

@@ -27,6 +27,7 @@
 (add-hook 'prog-mode-hook #'hs-minor-mode)
 
 ;; dired
+(define-key global-map (kbd "C-, C-d") 'dired-jump-other-window)
 (define-key dired-mode-map (kbd "M-<up>") 'dired-prev-subdir)
 (define-key dired-mode-map (kbd "M-<down>") 'dired-next-subdir)
 (define-key dired-mode-map (kbd "M-<left>") 'dired-hide-all)

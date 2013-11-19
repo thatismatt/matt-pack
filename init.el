@@ -56,6 +56,14 @@
 (setq yas-snippet-dirs `(,matts-snippet-dir ,live-yasnippet-dir))
 (yas-reload-all)
 
+;; dired & popwin
+(push '(dired-mode :position left) popwin:special-display-config)
+
+;; dired details
+(live-add-pack-lib "dired-details")
+(require 'dired-details)
+(dired-details-install)
+
 ;; magit - ignore space in diff
 (setq magit-diff-options (quote ("--ignore-space-change")))
 

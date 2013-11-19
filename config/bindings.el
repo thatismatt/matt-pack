@@ -41,3 +41,4 @@
 (define-key magit-mode-map (kbd "q") 'kill-this-buffer)
 (define-key completion-list-mode-map (kbd "q") 'kill-this-buffer)
 (define-key grep-mode-map (kbd "q") 'kill-this-buffer)
+(define-key ibuffer-mode-map (kbd "q") 'kill-this-buffer)

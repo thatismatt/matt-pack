@@ -25,6 +25,9 @@
 ;; zoning - turn off
 (setq live-disable-zone t)
 
+;; customize config file location
+(setq custom-file (concat (live-pack-config-dir) "custom-configuration.el"))
+
 ;; rainbow delimiters
 ;; colors
 (setq rainbow-delimiters-max-face-count 7)

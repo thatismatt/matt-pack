@@ -14,6 +14,16 @@
 (define-key global-map (kbd "C--") (lambda () (interactive) (shrink-window-horizontally 5)))
 (define-key global-map (kbd "C-=") (lambda () (interactive) (enlarge-window-horizontally 5)))
 
+;; window creation/deletion
+(define-key window-number-meta-mode-map (kbd "M-1") nil) ;; unbind M-1's current usage
+(define-key window-number-meta-mode-map (kbd "M-2") nil) ;; unbind M-2's current usage
+(define-key window-number-meta-mode-map (kbd "M-3") nil) ;; unbind M-3's current usage
+(define-key window-number-meta-mode-map (kbd "M-0") nil) ;; unbind M-0's current usage
+(define-key global-map (kbd "M-1") 'delete-other-windows)
+(define-key global-map (kbd "M-2") 'split-window-vertically)
+(define-key global-map (kbd "M-3") 'split-window-horizontally)
+(define-key global-map (kbd "M-0") 'delete-window)
+
 ;; undo tree
 (define-key global-map (kbd "C-, u") 'undo-tree-visualize)
 

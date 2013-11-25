@@ -44,7 +44,7 @@
 (define-key dired-mode-map (kbd "M-<right>") 'dired-hide-subdir)
 (define-key dired-mode-map (kbd "C-k") 'dired-kill-subdir)
 (define-key dired-mode-map (kbd "M-k") 'dired-kill-tree)
-(define-key dired-mode-map (kbd "RET") 'dired-find-file-other-window)
+(define-key dired-mode-map (kbd "RET") 'dired-find-file)
 
 ;; js2
 (define-key js2-mode-map (kbd "C-, C-e") 'js2-next-error)

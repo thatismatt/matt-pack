@@ -67,6 +67,10 @@
 (require 'dired-details)
 (dired-details-install)
 
+;; speedbar
+(setq speedbar-show-unknown-files t)
+(setq speedbar-use-images nil)
+
 ;; magit - ignore space in diff
 (setq magit-diff-options (quote ("--ignore-space-change")))
 

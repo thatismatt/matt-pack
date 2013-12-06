@@ -74,7 +74,7 @@
 (setq speedbar-use-images nil)
 
 ;; magit - ignore space in diff
-(setq magit-diff-options (quote ("--ignore-space-change")))
+(setq magit-diff-options '("--ignore-space-change"))
 
 ;; auto mode
 (add-to-list 'auto-mode-alist '("\\.\\(jspf?\\|tag\\)$" . html-mode))

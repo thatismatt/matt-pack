@@ -21,6 +21,8 @@
 
 ;; enable stuff
 (put 'upcase-region 'disabled nil)
+(put 'narrow-to-region 'disabled nil)
+(put 'narrow-to-page 'disabled nil)
 
 ;; zoning - turn off
 (setq live-disable-zone t)

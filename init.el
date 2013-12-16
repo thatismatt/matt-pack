@@ -73,8 +73,9 @@
 (setq speedbar-show-unknown-files t)
 (setq speedbar-use-images nil)
 
-;; magit - ignore space in diff
+;; magit
 (setq magit-diff-options (quote ("--ignore-space-change")))
+(setq magit-status-buffer-switch-function 'switch-to-buffer)
 
 ;; auto mode
 (add-to-list 'auto-mode-alist '("\\.\\(jspf?\\|tag\\)$" . html-mode))

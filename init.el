@@ -74,7 +74,7 @@
 (setq speedbar-use-images nil)
 
 ;; magit
-(setq magit-diff-options (quote ("--ignore-space-change")))
+(setq magit-diff-options '("--ignore-space-change"))
 (setq magit-status-buffer-switch-function 'switch-to-buffer)
 
 ;; auto mode

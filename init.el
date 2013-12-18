@@ -72,6 +72,7 @@
 ;; speedbar
 (setq speedbar-show-unknown-files t)
 (setq speedbar-use-images nil)
+(add-to-list 'speedbar-frame-parameters '(width . 40))
 
 ;; magit
 (setq magit-diff-options '("--ignore-space-change"))

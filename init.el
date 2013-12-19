@@ -70,6 +70,7 @@
 (dired-details-install)
 
 ;; speedbar
+(require 'speedbar)
 (setq speedbar-show-unknown-files t)
 (setq speedbar-use-images nil)
 (add-to-list 'speedbar-frame-parameters '(width . 40))

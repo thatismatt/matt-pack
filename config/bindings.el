@@ -6,8 +6,16 @@
 (define-key global-map (kbd "C-x k") 'kill-this-buffer)
 
 ;; window & buffer switching
-(define-key global-map (kbd "S-<menu>") 'previous-buffer)
-(define-key global-map (kbd "<menu>")   'next-buffer)
+(defun matt-normal-buffer-switch (f)
+  "Switch buffers with `f` until the `buffer-name` doesn't start with a \"*\"."
+  (interactive)
+  (funcall f)
+  (if (equal "*" (substring (buffer-name) 0 1))
+      (progn
+        (message "Skipped buffer %s" (buffer-name))
+        (matt-normal-buffer-switch f))))
+(define-key global-map (kbd "S-<menu>") (lambda () (interactive) (matt-normal-buffer-switch 'previous-buffer)))
+(define-key global-map (kbd "<menu>")   (lambda () (interactive) (matt-normal-buffer-switch 'next-buffer)))
 (define-key global-map (kbd "C-<menu>") 'win-switch-dispatch)
 
 ;; window resizing

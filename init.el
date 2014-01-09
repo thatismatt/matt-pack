@@ -82,6 +82,7 @@
 ;; magit
 (setq magit-diff-options '("--ignore-space-change"))
 (setq magit-status-buffer-switch-function 'switch-to-buffer)
+(setq magit-server-window-for-commit nil)
 
 ;; auto mode
 (add-to-list 'auto-mode-alist '("\\.\\(jspf?\\|tag\\)$" . html-mode))
